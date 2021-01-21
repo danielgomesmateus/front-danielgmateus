@@ -10,7 +10,7 @@
     "build-deploy": "vue-cli-service build; aws s3 sync dist/ s3://thaisminas.com.br"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.4",
     "lodash": "^4.17.20",
     "minify-css-string": "^1.0.0",

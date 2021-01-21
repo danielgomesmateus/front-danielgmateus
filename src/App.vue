@@ -7,7 +7,7 @@
     >
       <div class="d-flex align-center">
         <v-img
-          alt="TMinas logo"
+          alt="danielgmateus logo"
           class="shrink mr-2"
           contain
           src="./assets/logo.png"
@@ -122,7 +122,7 @@
         <v-divider></v-divider>
   
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>Thaís Minas</strong>
+          {{ new Date().getFullYear() }} — <strong>danielgmateus</strong>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -158,7 +158,6 @@
     methods: {
       ...mapActions({
         getProjectsAction: 'project/getProjects',
-        getAlbumsAction: 'album/getAlbums',
         getProjectsCategoriesAction: 'projectCategory/getProjectsCategories',
         getSlidesAction: 'slide/getSlides',
         getPagesAction: 'page/getPages'
@@ -166,7 +165,6 @@
     },
     created() {
       this.getProjectsAction()       
-      this.getAlbumsAction()
       this.getSlidesAction()
       this.getProjectsCategoriesAction()
       this.getPagesAction()

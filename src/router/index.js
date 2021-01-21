@@ -10,9 +10,6 @@ import ListProjects from '../views/Projects/ListProjects'
 import ViewProject from '../views/Projects/ViewProject'
 import ListCategoriesProjects from '../views/Projects/ListCategoriesProjects'
 
-import ListAlbums from '../views/Galleries/ListAlbums'
-import ViewAlbum from '../views/Galleries/ViewAlbum'
-
 import ViewPage from '../views/Pages/ViewPage'
 
 Vue.use(VueRouter)
@@ -24,15 +21,15 @@ export default new VueRouter({
       path: '/', 
       component: Home, 
       meta: {
-        title: 'TMinas - Página inicial',
+        title: 'danielgmateus - Página inicial',
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - Página Inicial'
+            content: 'danielgmateus - Página Inicial'
           },
           {
             property: 'og:description',
-            content: 'TMinas - Página Inicial'
+            content: 'danielgmateus - Página Inicial'
           }
         ]
       } 
@@ -41,15 +38,15 @@ export default new VueRouter({
       path: '*', 
       component: PageNotFound, 
       meta: {
-        title: 'TMinas - Página não encontrada', 
+        title: 'danielgmateus - Página não encontrada', 
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - 404 - Página não encontrada'
+            content: 'danielgmateus - 404 - Página não encontrada'
           },
           {
             property: 'og:description',
-            content: 'TMinas - 404 - Página não encontrada'
+            content: 'danielgmateus - 404 - Página não encontrada'
           }
         ]
       }
@@ -58,15 +55,15 @@ export default new VueRouter({
       path: '/pagina-nao-encontrada', 
       component: PageNotFound, 
       meta: {
-        title: 'TMinas - Página não encontrada', 
+        title: 'danielgmateus - Página não encontrada', 
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - 404 - Página não encontrada.'
+            content: 'danielgmateus - 404 - Página não encontrada.'
           },
           {
             property: 'og:description',
-            content: 'TMinas - 404 - Página não encontrada.'
+            content: 'danielgmateus - 404 - Página não encontrada.'
           }
         ]
       }
@@ -75,49 +72,15 @@ export default new VueRouter({
       path: '/fale-conosco', 
       component: Contacts, 
       meta: {
-        title: 'TMinas - Fale conosco', 
+        title: 'danielgmateus - Fale conosco', 
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - Entre em contato'
+            content: 'danielgmateus - Entre em contato'
           },
           {
             property: 'og:description',
-            content: 'TMinas - Entre em contato'
-          }
-        ]
-      }
-    },
-    { 
-      path: '/albums', 
-      component: ListAlbums, 
-      meta: {
-        title: 'TMinas - Álbums', 
-        metaTags: [
-          {
-            name: 'description',
-            content: 'TMinas - Álbums'
-          },
-          {
-            property: 'og:description',
-            content: 'TMinas - Álbums'
-          }
-        ]
-      }
-    },
-    { 
-      path: '/album/:slug', 
-      component: ViewAlbum, 
-      meta: {
-        title: 'TMinas - Álbum', 
-        metaTags: [
-          {
-            name: 'description',
-            content: 'TMinas - Álbum'
-          },
-          {
-            property: 'og:description',
-            content: 'TMinas - Álbum'
+            content: 'danielgmateus - Entre em contato'
           }
         ]
       }
@@ -126,15 +89,15 @@ export default new VueRouter({
       path: '/projetos', 
       component: ListProjects, 
       meta: {
-        title: 'TMinas - Projetos', 
+        title: 'danielgmateus - Projetos', 
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - Projetos'
+            content: 'danielgmateus - Projetos'
           },
           {
             property: 'og:description',
-            content: 'TMinas - Projetos'
+            content: 'danielgmateus - Projetos'
           }
         ]
       }
@@ -143,15 +106,15 @@ export default new VueRouter({
       path: '/projeto/:slug', 
       component: ViewProject, 
       meta: {
-        title: 'TMinas - Projeto', 
+        title: 'danielgmateus - Projeto', 
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - Projeto'
+            content: 'danielgmateus - Projeto'
           },
           {
             property: 'og:description',
-            content: 'TMinas - Projeto'
+            content: 'danielgmateus - Projeto'
           }
         ]
       }
@@ -160,15 +123,15 @@ export default new VueRouter({
       path: '/projeto-categoria/:slug', 
       component: ListCategoriesProjects, 
       meta: {
-        title: 'TMinas - Categorias', 
+        title: 'danielgmateus - Categorias', 
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - Categorias'
+            content: 'danielgmateus - Categorias'
           },
           {
             property: 'og:description',
-            content: 'TMinas - Categorias'
+            content: 'danielgmateus - Categorias'
           }
         ]
       }
@@ -177,15 +140,15 @@ export default new VueRouter({
       path: '/pagina/:slug', 
       component: ViewPage, 
       meta: {
-        title: 'TMinas - Página', 
+        title: 'danielgmateus - Página', 
         metaTags: [
           {
             name: 'description',
-            content: 'TMinas - Página'
+            content: 'danielgmateus - Página'
           },
           {
             property: 'og:description',
-            content: 'TMinas - Página'
+            content: 'danielgmateus - Página'
           }
         ]
       }
