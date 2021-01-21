@@ -1,4 +1,4 @@
-# front-thaisminas
+# front-danielgmateus
 
 ## Project setup
 ```
