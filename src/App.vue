@@ -160,14 +160,12 @@
         getProjectsAction: 'project/getProjects',
         getPostsAction: 'post/getPosts',
         getProjectsCategoriesAction: 'projectCategory/getProjectsCategories',
-        getSlidesAction: 'slide/getSlides',
         getPagesAction: 'page/getPages'
       })
     },
     created() {
       this.getProjectsAction() 
       this.getPostsAction()      
-      this.getSlidesAction()
       this.getProjectsCategoriesAction()
       this.getPagesAction()
     }
