@@ -1,70 +1,45 @@
 <template>
   <v-app>
-    <v-container fluid hidden-sm-and-down>
-      <v-row>
-        <v-carousel 
-          v-if="slides_count"
-          cycle
-          height="500"
-          hide-delimiter-background
-          show-arrows-on-hover
-        >
-          <v-carousel-item
-            v-for="(slide, index) in slides"
-            :key="index"
-            :src="slide.image"
-          >
-            <v-row
-              class="fill-height"
-              align="center"
-              justify="center"
-            >
-              <div class="display-3 white--text">{{ slide.title }}</div>
-            </v-row>
-          </v-carousel-item>
-        </v-carousel>
-      </v-row>
-    </v-container>
     <v-container>
+      <list-posts :title="titlePosts" :posts="posts" :count="posts_count" />
       <list-projects :title="titleProjects" :projects="projects" :count="projects_count" />
     </v-container>
   </v-app>
 </template>
 
 <script>
+  import ListPosts from '../components/Posts/List'
   import ListProjects from '../components/Projects/List'
 
   import { mapGetters } from 'vuex'
 
   export default {
     components: {
+      'list-posts': ListPosts,
       'list-projects': ListProjects
     },
     data() {
       return {
-        titleProjects: 'Projetos',
-        slide: 0,
-        options: {
-          slideshowInterval: 3000
-        }
+        titlePosts: 'Postagens',
+        titleProjects: 'Projetos'
       }
     },
     computed: {
       ...mapGetters({
-        getProjects: 'project/getProjects',
-        getSlides: 'slide/getSlides'
+        getPosts: 'post/getPosts',
+        getProjects: 'project/getProjects'
       }),
+      posts() {
+        return this.getPosts.results
+      },
+      posts_count() {
+        return this.getPosts.count
+      },
       projects() {
         return this.getProjects.results
       },
       projects_count() {
         return this.getProjects.count
-      },
-      slides() {
-        return this.getSlides.results
-      },
-      slides_count() {
-        return this.getSlides.count
       }
     }
   }

@@ -10,10 +10,10 @@ const apiClient = axios.create({
 })
 
 export default {
-  getProjectsCategories() {
-    return apiClient.get(`/projects-category/`)
+  getPostsCategories() {
+    return apiClient.get(`/posts-category/`)
   },
-  getProjectCategoryBySlug(slug) {
-    return apiClient.get(`/projects-category/${ slug }`)
+  getPostCategoryBySlug(slug) {
+    return apiClient.get(`/posts-category/${ slug }`)
   }
 }

@@ -1,0 +1,79 @@
+<template>  
+  <v-row>
+    <v-col cols="12" md="12" v-if="count == 0">    
+      <alert :alert="alert" />
+    </v-col>
+    <v-col cols="12" md="12" v-if="title && count >= 1">
+      <h1 class="title content-title">
+        {{ title }}
+        <v-chip
+          class="float-right"
+          color="green"
+          text-color="white"
+        >
+          <v-avatar
+            left
+            class="green darken-4"
+          >
+            {{ count }}
+          </v-avatar>
+          postagens
+        </v-chip>
+      </h1>
+    </v-col>
+    <v-col cols="12" md="4" v-for="(project, index) in posts" :key="index">
+      <v-card
+        class="mx-auto"
+      >
+        <v-img
+          :src="project.cover_image"
+        ></v-img>
+    
+        <v-card-title>
+          {{ project.name }}
+        </v-card-title>
+    
+        <v-card-subtitle>
+          {{ project.description_short }}
+        </v-card-subtitle>
+    
+        <v-card-actions>
+          <v-btn small color="info" dark @click="$router.push({ path: `/postagem/${ project.slug }` }).catch(err => {})">
+            <v-icon>mdi-magnify</v-icon>  <span class="font-weight-bold">Visualizar</span>
+          </v-btn>
+        </v-card-actions>
+    
+      </v-card>
+    </v-col>
+  </v-row>
+</template>
+
+<script>
+  import Alert from '../../components/Alerts/Alert'
+
+  export default {
+    name: 'ListPosts',
+    components: {
+      'alert': Alert
+    },
+    props: ['title', 'posts', 'count'],
+    data() {
+      return {
+        alert: {
+          value: true,
+          type: 'warning',
+          message: 'Nenhum projeto publicado por aqui ainda.'
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  .content-title {
+    background: #FF9100;
+    color: #FFF;
+    padding: 8px;
+    border-radius: 3px;
+  }
+</style>

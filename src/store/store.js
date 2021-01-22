@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import * as project from './modules/project'
+import * as post from './modules/post'
 import * as page from './modules/page'
 import * as projectCategory from './modules/projectCategory'
 import * as slide from './modules/slide'
@@ -11,6 +12,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   modules: {
     project,
+    post,
     page,
     projectCategory,
     slide
@@ -28,6 +30,7 @@ export default new Vuex.Store({
     ],
     items: [
       { title: 'Home', action: 'mdi-home', path: '/' },
+      { title: 'Postagens', action: 'mdi-newspaper', path: '/postagens' },
       { title: 'Projetos', action: 'mdi-projector', path: '/projetos' },
       { title: 'Fale Conosco', action: 'mdi-email-newsletter', path: '/fale-conosco'  }
     ]
