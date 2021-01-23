@@ -1,6 +1,8 @@
 <template>
   <v-app>
     <v-container>
+      <v-col cols="12" md="12">
+      </v-col>
       <list-experiences :title="titleExperiences" :experiences="experiences" />
       <list-skills :title="titleSkills" :skills="skills" />
     </v-container>

@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12" md="12">
+    <v-col cols="12" md="12" class="hidden-sm-and-down">
       <v-timeline>
         <v-timeline-item
           v-for="(experience, key) in experiences"
@@ -33,6 +33,43 @@
           </v-card>
         </v-timeline-item>
       </v-timeline>
+    </v-col>
+    
+    <v-col cols="12" md="12" class="hidden-md-and-up">
+      <v-timeline
+          align-top
+          dense
+        >
+          <v-timeline-item
+            v-for="(experience, key) in experiences"
+            :key="key"
+            small
+          >
+            <template v-slot:icon>
+              <v-avatar>
+                <v-img
+                  :src="experience.image"
+                  :title="experience.company"
+                  :alt="experience.company"
+                  class="elevation-4"
+                ></v-img>
+              </v-avatar>
+            </template>
+            <v-row class="pt-1">
+              <v-col>
+                <strong>
+                  {{ experience.title }}
+                </strong>
+                <div class="subtitle-2 font-weight-bold">
+                  {{ experience | getStartedDateEndedDate }}
+                </div>
+                <div class="subtitle-2">
+                  {{ experience.description }}
+                </div>
+              </v-col>
+            </v-row>
+          </v-timeline-item>
+        </v-timeline>
     </v-col>
   </v-row>
 </template>
