@@ -7,6 +7,7 @@ import * as post from './modules/post'
 import * as postCategory from './modules/postCategory'
 import * as page from './modules/page'
 import * as experience from './modules/experience'
+import * as skill from './modules/skill'
 
 Vue.use(Vuex)
 
@@ -17,7 +18,8 @@ export default new Vuex.Store({
     post,
     postCategory,
     page,
-    experience
+    experience,
+    skill
   },
   state: {
     socialNetworks: [

@@ -10,7 +10,7 @@ const apiClient = axios.create({
 })
 
 export default {
-  getExperiences() {
-    return apiClient.get(`/experiences/`)
+  getSkills() {
+    return apiClient.get(`/skills/`)
   }
 }

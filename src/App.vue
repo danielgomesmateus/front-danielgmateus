@@ -163,7 +163,8 @@
         getPostsAction: 'post/getPosts',
         getPostsCategoriesAction: 'postCategory/getPostsCategories',
         getPagesAction: 'page/getPages',
-        getExperiencesAction: 'experience/getExperiences'
+        getExperiencesAction: 'experience/getExperiences',
+        getSkillsAction: 'skill/getSkills'
       })
     },
     created() {
@@ -173,6 +174,7 @@
       this.getPostsCategoriesAction()    
       this.getPagesAction()
       this.getExperiencesAction()
+      this.getSkillsAction()
     }
   }
 </script>
