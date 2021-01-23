@@ -21,24 +21,31 @@
         </v-chip>
       </h1>
     </v-col>
-    <v-col cols="12" md="4" v-for="(project, index) in posts" :key="index">
+    <v-col cols="12" md="4" v-for="(post, index) in posts" :key="index">
       <v-card
         class="mx-auto"
       >
         <v-img
-          :src="project.cover_image"
+          :src="post.cover_image"
         ></v-img>
     
         <v-card-title>
-          {{ project.name }}
+          <p>
+          {{ post.name }}
+          </p>
         </v-card-title>
     
         <v-card-subtitle>
-          {{ project.description_short }}
+          <p class="subtitle-2">
+            {{ post.description_short }}
+          </p>
+          <p class="subtitle-2 font-weight-bold">
+            Última atualização: {{ post.updated_at | getFormattedDateTime('DD/MM/YYYY HH:mm:ss') }}
+          </p>
         </v-card-subtitle>
     
         <v-card-actions>
-          <v-btn small color="info" dark @click="$router.push({ path: `/postagem/${ project.slug }` }).catch(err => {})">
+          <v-btn small color="info" dark @click="$router.push({ path: `/postagem/${ post.slug }` }).catch(err => {})">
             <v-icon>mdi-magnify</v-icon>  <span class="font-weight-bold">Visualizar</span>
           </v-btn>
         </v-card-actions>

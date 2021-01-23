@@ -12,6 +12,9 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="12">
+          <p class="subtitle-2 font-weight-bold">
+            Última atualização: {{ post.updated_at | getFormattedDateTime('DD/MM/YYYY HH:mm:ss') }}
+          </p>
           <div class="text-left" v-html="post.content">
           </div>
         </v-col>
