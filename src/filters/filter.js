@@ -2,6 +2,8 @@ import Vue from 'vue'
 
 import moment from 'moment'
 
+moment.locale('pt-br')
+
 const getStartedDateEndedDate = (data) => {
   let started_at = moment(data.started_at, 'YYYY-MM-DD'),
       ended_at   = moment(data.ended_at, 'YYYY-MM-DD')
