@@ -33,12 +33,16 @@
           </div>
           <div class="content body-1">
             <p>
-              Meu nome é Daniel e tenho 27 anos. Sou apaixonado pela programação, pelo blues e por video games.
+              Falando de forma resumida sou apaixonado pela programação, pelo blues, por video games e pela cultura japonesa.
+            </p>
+            <p>
+              Agora, falando sério. Meu nome é Daniel e tenho 27 anos. Sou formado em Sistemas de Informação e pós graduado em Engenharia de Software.
+              Hoje atuo como desenvolvedor com foco no back-end, utilizando Python e PHP como linguagens principais.
             </p>
             <p>
               Estou sempre em busca de novos conhecimentos e desafios. Gosto e tenho facilidade no 
               aprendizado de novas tecnologias. Trabalho com grande foco no backend para aplicações 
-              web, porém, gosto bastante de trabalhar também no frontend da aplicação.
+              web, porém, gosto bastante de trabalhar também no front-end da aplicação.
             </p>
             <p>
               Utilizo tecnologias como: Python, Django, VueJS, NodeJS, CakePHP, MongoDB, MySQL, Docker, Linux, AWS e outros.
