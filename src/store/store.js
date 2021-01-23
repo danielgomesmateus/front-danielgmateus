@@ -2,28 +2,30 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import * as project from './modules/project'
+import * as projectCategory from './modules/projectCategory'
 import * as post from './modules/post'
 import * as page from './modules/page'
-import * as projectCategory from './modules/projectCategory'
+import * as experience from './modules/experience'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
     project,
+    projectCategory,
     post,
     page,
-    projectCategory
+    experience
   },
   state: {
     socialNetworks: [
       { 
         icon: 'mdi-linkedin', 
-        link: 'https://www.linkedin.com/in/thaís-minas-b529a679/' 
+        link: 'https://www.linkedin.com/in/danielgmateus/' 
       },
       { 
-        icon: 'mdi-instagram',
-        link: 'https://www.instagram.com/thaisminas/' 
+        icon: 'mdi-facebook',
+        link: 'https://www.facebook.com/danielgmateus/' 
       },
     ],
     items: [

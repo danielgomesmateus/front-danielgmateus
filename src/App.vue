@@ -5,6 +5,7 @@
       color="primary"
       dark
     >
+    <!--
       <div class="d-flex align-center">
         <v-img
           alt="danielgmateus logo"
@@ -15,7 +16,7 @@
           width="210"
         />
       </div>
-
+      -->
       <v-spacer></v-spacer>
 
       <v-menu bottom left>
@@ -122,7 +123,7 @@
         <v-divider></v-divider>
   
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>danielgmateus</strong>
+          {{ new Date().getFullYear() }} - <strong>danielgmateus</strong>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -158,16 +159,18 @@
     methods: {
       ...mapActions({
         getProjectsAction: 'project/getProjects',
-        getPostsAction: 'post/getPosts',
         getProjectsCategoriesAction: 'projectCategory/getProjectsCategories',
-        getPagesAction: 'page/getPages'
+        getPostsAction: 'post/getPosts',
+        getPagesAction: 'page/getPages',
+        getExperiencesAction: 'experience/getExperiences'
       })
     },
     created() {
       this.getProjectsAction() 
-      this.getPostsAction()      
       this.getProjectsCategoriesAction()
+      this.getPostsAction()      
       this.getPagesAction()
+      this.getExperiencesAction()
     }
   }
 </script>
