@@ -6,15 +6,15 @@ export const namespaced = true
 
 export const state = {
   experiences: [],
-  page: {}
+  experience: {}
 }
 
 export const mutations = {
   SET_EXPERIENCES(state, experiences) {
     state.experiences = experiences
   },
-  SET_EXPERIENCE(state, page) {
-    state.page = page
+  SET_EXPERIENCE(state, experience) {
+    state.experience = experience
   }
 }
 
@@ -29,16 +29,16 @@ export const actions = {
       })
   },
   getExperienceBySlug({ commit, getters, state }, slug) {
-    if (slug == state.page.slug) {
-      return state.page
+    if (slug == state.experience.slug) {
+      return state.experience
     }
 
     if (state.experiences.count >= 1) {
-      let page = getters.getExperienceBySlug(slug)
+      let experience = getters.getExperienceBySlug(slug)
 
-      if (page) {
-        commit('SET_EXPERIENCE', page)
-        return page
+      if (experience) {
+        commit('SET_EXPERIENCE', experience)
+        return experience
       }
     }
 
@@ -56,6 +56,6 @@ export const getters = {
   },  
   getExperienceBySlug: state => slug => {
     const experiences = state.experiences.results
-    return _.find(experiences, function(page) { return page.slug == slug })
+    return _.find(experiences, function(experience) { return experience.slug == slug })
   }
 }
