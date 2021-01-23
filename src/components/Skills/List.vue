@@ -1,5 +1,10 @@
 <template>
   <v-row>
+    <v-col cols="12" md="12">
+      <div class="headline content-title font-weight-bold">
+        {{ title }}
+      </div>
+    </v-col>
     <v-col cols="12" md="3" xs="12" sm="12" v-for="(skill, index) in skills" :key="index">
       <v-card
         class="mx-auto"

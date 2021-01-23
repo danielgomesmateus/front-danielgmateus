@@ -1,6 +1,11 @@
 <template>
   <v-row>
-    <v-col cols="12" md="12" class="hidden-sm-and-down">
+    <v-col cols="12" md="12">
+      <div class="headline content-title font-weight-bold">
+        {{ title }}
+      </div>
+    </v-col>
+    <v-col cols="12" md="8" offset-md="2" class="hidden-sm-and-down">
       <v-timeline>
         <v-timeline-item
           v-for="(experience, key) in experiences"

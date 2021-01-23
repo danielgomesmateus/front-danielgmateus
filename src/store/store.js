@@ -29,6 +29,10 @@ export default new Vuex.Store({
         icon: 'mdi-facebook',
         link: 'https://www.facebook.com/danielgmateus/' 
       },
+      { 
+        icon: 'mdi-github',
+        link: 'https://github.com/danielgomesmateus' 
+      },
     ],
     items: [
       { title: 'Home', path: '/' },

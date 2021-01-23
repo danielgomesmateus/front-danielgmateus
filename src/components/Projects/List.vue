@@ -68,12 +68,3 @@
     }
   }
 </script>
-
-<style>
-  .content-title {
-    background: #FF9100;
-    color: #FFF;
-    padding: 8px;
-    border-radius: 3px;
-  }
-</style>

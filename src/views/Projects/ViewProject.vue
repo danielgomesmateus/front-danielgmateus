@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="12">
-          <h1 class="display-1 text-center">
+          <h1 class="headline text-center">
             {{ project.name }}
           </h1>
         </v-col>
