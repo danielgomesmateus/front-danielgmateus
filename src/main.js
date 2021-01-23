@@ -5,6 +5,8 @@ import vuetify from './plugins/vuetify'
 import VuePageTransition from 'vue-page-transition'
 import VueTheMask from 'vue-the-mask' 
 
+import filters from './filters/filter'
+
 import router from './router/index'
 import store from './store/store'
 
@@ -39,6 +41,7 @@ Vue.config.productionTip = false
 
 Vue.use(VuePageTransition)
 Vue.use(VueTheMask)
+Vue.use(filters)
 
 new Vue({
   vuetify,

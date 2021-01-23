@@ -16,6 +16,8 @@ import ListCategoriesPosts from '../views/Posts/ListCategoriesPosts'
 
 import ViewPage from '../views/Pages/ViewPage'
 
+import ViewExperience from '../views/Experiences/ViewExperience'
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -204,6 +206,23 @@ export default new VueRouter({
           {
             property: 'og:description',
             content: 'danielgmateus - Página'
+          }
+        ]
+      }
+    },
+    { 
+      path: '/experiencias/', 
+      component: ViewExperience, 
+      meta: {
+        title: 'danielgmateus - Experiências', 
+        metaTags: [
+          {
+            name: 'description',
+            content: 'danielgmateus - Experiências'
+          },
+          {
+            property: 'og:description',
+            content: 'danielgmateus - Experiências'
           }
         ]
       }
