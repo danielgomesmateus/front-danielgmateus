@@ -5,7 +5,6 @@ import * as project from './modules/project'
 import * as projectCategory from './modules/projectCategory'
 import * as post from './modules/post'
 import * as postCategory from './modules/postCategory'
-import * as page from './modules/page'
 import * as experience from './modules/experience'
 import * as skill from './modules/skill'
 
@@ -17,7 +16,6 @@ export default new Vuex.Store({
     projectCategory,
     post,
     postCategory,
-    page,
     experience,
     skill
   },
@@ -33,10 +31,10 @@ export default new Vuex.Store({
       },
     ],
     items: [
-      { title: 'Home', action: 'mdi-home', path: '/' },
-      { title: 'Postagens', action: 'mdi-newspaper', path: '/postagens' },
-      { title: 'Projetos', action: 'mdi-projector', path: '/projetos' },
-      { title: 'Fale Conosco', action: 'mdi-email-newsletter', path: '/fale-conosco'  }
+      { title: 'Home', path: '/' },
+      { title: 'Artigos', path: '/artigos' },
+      { title: 'Projetos', path: '/projetos' },
+      { title: 'Entre em contato', path: '/entre-em-contato' }
     ]
   }
 })

@@ -14,12 +14,6 @@ import ListPosts from '../views/Posts/ListPosts'
 import ViewPost from '../views/Posts/ViewPost'
 import ListCategoriesPosts from '../views/Posts/ListCategoriesPosts'
 
-import ViewPage from '../views/Pages/ViewPage'
-
-import ListExperiences from '../views/Experiences/ListExperiences'
-
-import ListSkills from '../views/Skills/ListSkills'
-
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -77,10 +71,10 @@ export default new VueRouter({
       }
     },
     { 
-      path: '/fale-conosco', 
+      path: '/entre-em-contato', 
       component: Contacts, 
       meta: {
-        title: 'danielgmateus - Fale conosco', 
+        title: 'danielgmateus - Entre em contato', 
         metaTags: [
           {
             name: 'description',
@@ -94,18 +88,18 @@ export default new VueRouter({
       }
     },
     { 
-      path: '/postagens', 
+      path: '/artigos', 
       component: ListPosts, 
       meta: {
-        title: 'danielgmateus - Postagens', 
+        title: 'danielgmateus - Artigos', 
         metaTags: [
           {
             name: 'description',
-            content: 'danielgmateus - Postagens'
+            content: 'danielgmateus - Artigos'
           },
           {
             property: 'og:description',
-            content: 'danielgmateus - Postagens'
+            content: 'danielgmateus - Artigos'
           }
         ]
       }
@@ -191,57 +185,6 @@ export default new VueRouter({
           {
             property: 'og:description',
             content: 'danielgmateus - Categorias'
-          }
-        ]
-      }
-    },
-    { 
-      path: '/pagina/:slug', 
-      component: ViewPage, 
-      meta: {
-        title: 'danielgmateus - Página', 
-        metaTags: [
-          {
-            name: 'description',
-            content: 'danielgmateus - Página'
-          },
-          {
-            property: 'og:description',
-            content: 'danielgmateus - Página'
-          }
-        ]
-      }
-    },
-    { 
-      path: '/experiencias', 
-      component: ListExperiences, 
-      meta: {
-        title: 'danielgmateus - Experiências', 
-        metaTags: [
-          {
-            name: 'description',
-            content: 'danielgmateus - Experiências'
-          },
-          {
-            property: 'og:description',
-            content: 'danielgmateus - Experiências'
-          }
-        ]
-      }
-    },
-    { 
-      path: '/habilidades', 
-      component: ListSkills, 
-      meta: {
-        title: 'danielgmateus - Habilidades', 
-        metaTags: [
-          {
-            name: 'description',
-            content: 'danielgmateus - Habilidades'
-          },
-          {
-            property: 'og:description',
-            content: 'danielgmateus - Habilidades'
           }
         ]
       }

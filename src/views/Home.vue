@@ -1,45 +1,39 @@
 <template>
   <v-app>
     <v-container>
-      <list-posts :title="titlePosts" :posts="posts" :count="posts_count" />
-      <list-projects :title="titleProjects" :projects="projects" :count="projects_count" />
+      <list-experiences :title="titleExperiences" :experiences="experiences" />
+      <list-skills :title="titleSkills" :skills="skills" />
     </v-container>
   </v-app>
 </template>
 
 <script>
-  import ListPosts from '../components/Posts/List'
-  import ListProjects from '../components/Projects/List'
+  import ListExperiences from '../components/Experiences/List'
+  import ListSkills from '../components/Skills/List'
 
   import { mapGetters } from 'vuex'
 
   export default {
     components: {
-      'list-posts': ListPosts,
-      'list-projects': ListProjects
+      'list-experiences': ListExperiences,
+      'list-skills': ListSkills
     },
     data() {
       return {
-        titlePosts: 'Postagens',
-        titleProjects: 'Projetos'
+        titleExperiences: 'Experiências',
+        titleSkills: 'Habilidades'
       }
     },
     computed: {
       ...mapGetters({
-        getPosts: 'post/getPosts',
-        getProjects: 'project/getProjects'
+        getExperiencesGetter: 'experience/getExperiences',
+        getSkills: 'skill/getSkills'
       }),
-      posts() {
-        return this.getPosts.results
+      experiences() {
+        return this.getExperiencesGetter.results
       },
-      posts_count() {
-        return this.getPosts.count
-      },
-      projects() {
-        return this.getProjects.results
-      },
-      projects_count() {
-        return this.getProjects.count
+      skills() {
+        return this.getSkills.results
       }
     }
   }
