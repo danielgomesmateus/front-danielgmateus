@@ -161,6 +161,7 @@
         getProjectsAction: 'project/getProjects',
         getProjectsCategoriesAction: 'projectCategory/getProjectsCategories',
         getPostsAction: 'post/getPosts',
+        getPostsCategoriesAction: 'postCategory/getPostsCategories',
         getPagesAction: 'page/getPages',
         getExperiencesAction: 'experience/getExperiences'
       })
@@ -168,7 +169,8 @@
     created() {
       this.getProjectsAction() 
       this.getProjectsCategoriesAction()
-      this.getPostsAction()      
+      this.getPostsAction()  
+      this.getPostsCategoriesAction()    
       this.getPagesAction()
       this.getExperiencesAction()
     }

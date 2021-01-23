@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import * as project from './modules/project'
 import * as projectCategory from './modules/projectCategory'
 import * as post from './modules/post'
+import * as postCategory from './modules/postCategory'
 import * as page from './modules/page'
 import * as experience from './modules/experience'
 
@@ -14,6 +15,7 @@ export default new Vuex.Store({
     project,
     projectCategory,
     post,
+    postCategory,
     page,
     experience
   },
