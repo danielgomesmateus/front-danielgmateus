@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "aws s3 sync dist/ s3://thaisminas.com.br",
-    "build-deploy": "vue-cli-service build; aws s3 sync dist/ s3://thaisminas.com.br"
+    "deploy": "aws s3 sync dist/ s3://danielgmateus.com.br",
+    "build-deploy": "vue-cli-service build; aws s3 sync dist/ s3://danielgmateus.com.br"
   },
   "dependencies": {
     "axios": "^0.21.1",
