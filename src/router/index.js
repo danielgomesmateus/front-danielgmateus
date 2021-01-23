@@ -16,7 +16,9 @@ import ListCategoriesPosts from '../views/Posts/ListCategoriesPosts'
 
 import ViewPage from '../views/Pages/ViewPage'
 
-import ViewExperience from '../views/Experiences/ViewExperience'
+import ListExperiences from '../views/Experiences/ListExperiences'
+
+import ListSkills from '../views/Skills/ListSkills'
 
 Vue.use(VueRouter)
 
@@ -211,8 +213,8 @@ export default new VueRouter({
       }
     },
     { 
-      path: '/experiencias/', 
-      component: ViewExperience, 
+      path: '/experiencias', 
+      component: ListExperiences, 
       meta: {
         title: 'danielgmateus - Experiências', 
         metaTags: [
@@ -223,6 +225,23 @@ export default new VueRouter({
           {
             property: 'og:description',
             content: 'danielgmateus - Experiências'
+          }
+        ]
+      }
+    },
+    { 
+      path: '/habilidades', 
+      component: ListSkills, 
+      meta: {
+        title: 'danielgmateus - Habilidades', 
+        metaTags: [
+          {
+            name: 'description',
+            content: 'danielgmateus - Habilidades'
+          },
+          {
+            property: 'og:description',
+            content: 'danielgmateus - Habilidades'
           }
         ]
       }

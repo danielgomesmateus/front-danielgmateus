@@ -54,16 +54,14 @@
 
     export default {
       data() {
-        return {
-          color: 'orange',
-        }
+        return {}
       },
       computed: {
         ...mapGetters({
-          getExperiencesGetter: 'experience/getExperiences'
+          getSkillsGetter: 'experience/getExperiences'
         }),
         experiences() {
-          return this.getExperiencesGetter.results
+          return this.getSkillsGetter.results
         }
       }
     }
