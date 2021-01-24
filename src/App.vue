@@ -117,7 +117,8 @@
         getPostsAction: 'post/getPosts',
         getPostsCategoriesAction: 'postCategory/getPostsCategories',
         getExperiencesAction: 'experience/getExperiences',
-        getSkillsAction: 'skill/getSkills'
+        getSkillsAction: 'skill/getSkills',
+        getAcademicFormationsAction: 'academicFormation/getAcademicFormations'
       })
     },
     created() {
@@ -127,6 +128,7 @@
       this.getPostsCategoriesAction()    
       this.getExperiencesAction()
       this.getSkillsAction()
+      this.getAcademicFormationsAction()
     }
   }
 </script>
