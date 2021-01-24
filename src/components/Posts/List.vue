@@ -31,7 +31,7 @@
     
         <v-card-title>
           <p>
-          {{ post.name }}
+            {{ post.name }}
           </p>
         </v-card-title>
     
@@ -69,7 +69,7 @@
         alert: {
           value: true,
           type: 'warning',
-          message: 'Nenhum projeto publicado por aqui ainda.'
+          message: 'Nenhum artigo publicado por aqui ainda.'
         }
       }
     }
