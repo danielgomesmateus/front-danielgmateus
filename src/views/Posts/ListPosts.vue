@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <list-posts :title="title" :posts="posts" :count="posts_count" />
+      <list-posts :title="title" :posts="posts" :count="postsCount" />
     </v-container>
   </v-app>
 </template>
@@ -27,7 +27,7 @@
       posts() {
         return this.getPostsGetter.results
       },
-      posts_count() {
+      postsCount() {
         return this.getPostsGetter.count
       }
     }

@@ -63,8 +63,8 @@
         </v-col>
       </v-row>
       
-      <list-skills :title="titleSkills" :skills="skills" />
-      <list-experiences :title="titleExperiences" :experiences="experiences" />
+      <list-skills :title="titleSkills" :skills="skills" :count="countSkills" />
+      <list-experiences :title="titleExperiences" :experiences="experiences" :count="countExperiences" />
 
     </v-container>
 
@@ -96,8 +96,14 @@
       experiences() {
         return this.getExperiencesGetter.results
       },
+      countExperiences() {
+        return this.getExperiencesGetter.count
+      },
       skills() {
         return this.getSkills.results
+      },
+      countSkills() {
+        return this.getSkills.count
       }
     }
   }
