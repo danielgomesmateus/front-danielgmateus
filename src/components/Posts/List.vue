@@ -56,12 +56,12 @@
 </template>
 
 <script>
-  import Alert from '../../components/Alerts/Alert'
+  import DefaultAlert from '../../components/Alerts/Default'
 
   export default {
     name: 'ListPosts',
     components: {
-      'alert': Alert
+      'alert': DefaultAlert
     },
     props: ['title', 'posts', 'count'],
     data() {

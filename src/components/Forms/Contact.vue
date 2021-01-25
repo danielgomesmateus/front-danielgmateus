@@ -62,13 +62,13 @@
 
 
 <script>
-  import Alert from '../../components/Alerts/Alert'
+  import DefaultAlert from '../../components/Alerts/Default'
   import axios from 'axios'
 
   export default {
     name: 'Contact',
     components: {
-      'alert': Alert
+      'alert': DefaultAlert
     },
     props: ['title'],
     data: () => ({

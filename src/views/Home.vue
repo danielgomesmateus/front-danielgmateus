@@ -63,6 +63,7 @@
         </v-col>
       </v-row>
       
+      <list-academicFormations :title="titleAcademicFormations" :academicFormations="academicFormations" :count="countAcademicFormations" />
       <list-skills :title="titleSkills" :skills="skills" :count="countSkills" />
       <list-experiences :title="titleExperiences" :experiences="experiences" :count="countExperiences" />
 
@@ -72,26 +73,30 @@
 </template>
 
 <script>
-  import ListExperiences from '../components/Experiences/List'
   import ListSkills from '../components/Skills/List'
+  import ListExperiences from '../components/Experiences/List'
+  import ListAcademicFormations from '../components/AcademicFormations/List'
 
   import { mapGetters } from 'vuex'
 
   export default {
     components: {
       'list-experiences': ListExperiences,
-      'list-skills': ListSkills
+      'list-skills': ListSkills,
+      'list-academicFormations': ListAcademicFormations
     },
     data() {
       return {
         titleExperiences: 'Principais experiências',
-        titleSkills: 'Principais habilidades'
+        titleSkills: 'Principais habilidades',
+        titleAcademicFormations: 'Formações acadêmica'
       }
     },
     computed: {
       ...mapGetters({
         getExperiencesGetter: 'experience/getExperiences',
-        getSkills: 'skill/getSkills'
+        getSkills: 'skill/getSkills',
+        getAcademicFormations: 'academicFormation/getAcademicFormations'
       }),
       experiences() {
         return this.getExperiencesGetter.results
@@ -104,6 +109,12 @@
       },
       countSkills() {
         return this.getSkills.count
+      },
+      academicFormations() {
+        return this.getAcademicFormations.results
+      },
+      countAcademicFormations() {
+        return this.getAcademicFormations.count
       }
     }
   }
