@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="12">
-          <h1 class="headline text-center">
+          <h1 class="display-1 text-center content-title">
             {{ post.name }}
           </h1>
         </v-col>
@@ -15,7 +15,7 @@
           <p class="subtitle-2 font-weight-bold">
             Última atualização: {{ post.updated_at | getFormattedDateTime('DD/MM/YYYY HH:mm:ss') }}
           </p>
-          <div class="text-left" v-html="post.content">
+          <div class="text-left text-content" v-html="post.content">
           </div>
         </v-col>
       </v-row>
@@ -55,3 +55,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .text-content {
+    line-height: 32px;
+  }
+</style>
