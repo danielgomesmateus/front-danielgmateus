@@ -10,7 +10,7 @@ export default new Vuetify({
       light: {
         primary: '#212121',
         info: '#187888',
-        anchor: '#FFF'
+        anchor: '#187888'
       },
     },
     dark: false,
