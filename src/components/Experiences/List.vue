@@ -1,9 +1,5 @@
 <template>
-  <v-app>
-    <v-container>
-      <timeline :title="title" :items="experiences" />
-    </v-container>
-  </v-app>
+  <timeline :title="title" :items="experiences" />
 </template>
 <script>
   import Timeline from '../Timelines/Timeline'
