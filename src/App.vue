@@ -83,6 +83,10 @@
               <v-icon size="24px">{{ item.icon }}</v-icon>
             </v-btn>
           </v-card-text>
+
+          <v-card-text class="white--text text-center">
+            <v-icon>mdi-email-check</v-icon> contato@danielgmateus.com.br
+          </v-card-text>
     
           <v-card-text class="white--text text-center">
             "Bem-aventurado o homem que acha sabedoria, e o homem que adquire conhecimento." - Provérbios 3:13
