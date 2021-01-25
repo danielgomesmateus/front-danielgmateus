@@ -9,11 +9,11 @@
 </template>
 
 <script>
-  import Alert from '../components/Alerts/Alert'
+  import DefaultAlert from '../components/Alerts/Default'
 
   export default {
     components: {
-      'alert': Alert
+      'alert': DefaultAlert
     },
     data() {
       return {
