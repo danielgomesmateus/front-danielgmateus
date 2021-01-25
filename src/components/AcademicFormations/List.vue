@@ -1,9 +1,5 @@
 <template>
-  <v-app>
-    <v-container>
-      <timeline :title="title" :items="academicFormations" />
-    </v-container>
-  </v-app>
+  <timeline :title="title" :items="academicFormations" />
 </template>
 <script>
   import Timeline from '../../components/Timelines/Timeline'
