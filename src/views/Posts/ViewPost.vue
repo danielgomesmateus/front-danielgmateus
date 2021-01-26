@@ -1,13 +1,28 @@
 <template>
   <v-app>
-    <v-container>
-      <v-row>
-        <v-col cols="12" md="12">
-          <h1 class="display-1 text-center content-title">
-            {{ post.name }}
-          </h1>
-        </v-col>
-      </v-row>
+    <v-container fluid>
+      <v-parallax
+        dark
+        :src="post.cover_image"
+        height="300"
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col
+            class="text-center"
+            cols="12"
+          >
+            <h1 class="display-1 font-weight-thin mb-4">
+              {{ post.name }}
+            </h1>
+            <h4 class="subheading">
+              {{ post.description_short }}
+            </h4>
+          </v-col>
+        </v-row>
+      </v-parallax>
     </v-container>
     <v-container>
       <v-row>
