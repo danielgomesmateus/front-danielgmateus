@@ -5,6 +5,8 @@ import vuetify from './plugins/vuetify'
 import VuePageTransition from 'vue-page-transition'
 import VueTheMask from 'vue-the-mask' 
 
+import AddThis from 'vue-simple-addthis-share'
+
 import filters from './filters/filter'
 
 import router from './router/index'
@@ -42,6 +44,8 @@ Vue.config.productionTip = false
 Vue.use(VuePageTransition)
 Vue.use(VueTheMask)
 Vue.use(filters)
+
+Vue.component('add-this', AddThis)
 
 new Vue({
   vuetify,
