@@ -4,7 +4,7 @@
       <alert :alert="alert" />
     </v-col>
     <v-col cols="12" md="6" offset-md="3">
-      <h1 class="title text-center">
+      <h1 class="headline font-weight-bold content-title text-center">
         {{ title }}
       </h1>
       <v-form
