@@ -5,6 +5,8 @@ import minifyTheme from 'minify-css-string'
 Vue.use(Vuetify);
 
 export default new Vuetify({
+  customVariables: ['~/src/sass/variables.scss'],
+  treeShake: true,
   theme: {
     themes: {
       light: {

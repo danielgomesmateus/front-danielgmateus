@@ -20,7 +20,7 @@
         <v-spacer></v-spacer>
 
         <v-btn
-          class="hidden-sm-and-down"
+          class="hidden-sm-and-down font-weight-bold"
           v-for="(item, index) in items"
           :key="index"
           :to="item.path"
@@ -136,3 +136,11 @@
     }
   }
 </script>
+
+<style lang="scss">
+  @import '~/src/sass/variables.scss';
+
+  .v-application {
+    font-family: $body-font-family
+  }
+</style>
