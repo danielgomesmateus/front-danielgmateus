@@ -56,9 +56,7 @@
       </v-app-bar>
 
       <v-content>
-        <vue-page-transition name="zoom">
-          <router-view />
-        </vue-page-transition>
+        <router-view />
       </v-content>
     
       <v-footer
