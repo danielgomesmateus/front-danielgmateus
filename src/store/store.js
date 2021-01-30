@@ -38,7 +38,7 @@ export default new Vuex.Store({
     ],
     items: [
       { title: 'Home', path: '/' },
-      { title: 'Artigos', path: '/artigos' },
+      { title: 'Postagens', path: '/postagens' },
       { title: 'Projetos', path: '/projetos' },
       { title: 'Entre em contato', path: '/entre-em-contato' }
     ]

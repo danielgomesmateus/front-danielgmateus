@@ -88,18 +88,18 @@ export default new VueRouter({
       }
     },
     { 
-      path: '/artigos', 
+      path: '/postagens', 
       component: ListPosts, 
       meta: {
-        title: 'danielgmateus - Artigos', 
+        title: 'danielgmateus - Postagens', 
         metaTags: [
           {
             name: 'description',
-            content: 'danielgmateus - Artigos'
+            content: 'danielgmateus - Postagens'
           },
           {
             property: 'og:description',
-            content: 'danielgmateus - Artigos'
+            content: 'danielgmateus - Postagens'
           }
         ]
       }
