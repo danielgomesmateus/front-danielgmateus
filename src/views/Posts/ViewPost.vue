@@ -4,23 +4,25 @@
       <v-parallax
         dark
         :src="post.cover_image"
-        height="300"
+        height="400"
       >
         <v-row
           align="center"
           justify="center"
         >
-          <v-col
-            class="text-center"
-            cols="12"
-          >
-            <h1 class="display-1 font-weight-thin mb-4">
-              {{ post.name }}
-            </h1>
-            <h4 class="subheading">
-              {{ post.description_short }}
-            </h4>
-          </v-col>
+          <v-overlay value="true" absolute>
+            <v-col
+              class="text-center"
+              cols="12"
+            >
+              <h1 class="display-1 font-weight-thin mb-4">
+                {{ post.name }}
+              </h1>
+              <h4 class="subheading">
+                {{ post.description_short }}
+              </h4>
+            </v-col>
+          </v-overlay>
         </v-row>
       </v-parallax>
     </v-container>
@@ -31,7 +33,7 @@
             <div class="text-center pa-4">
               <add-this 
                 publicId="ra-600f6f7222712fed" 
-                data-url="THE URL"
+                :data-url="$router.path"
                 :data-title="post.name"
                 :data-description="post.description_short"
                 :data-media="post.cover_image"
