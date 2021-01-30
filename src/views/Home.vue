@@ -10,17 +10,19 @@
           align="center"
           justify="center"
         >
-          <v-col
-            class="text-center"
-            cols="12"
-          >
-            <h1 class="display-1 font-weight-thin mb-4">
-              danielgmateus
-            </h1>
-            <h4 class="subheading">
-              Analista de desenvolvimento | Python | PHP | NodeJS | VueJS
-            </h4>
-          </v-col>
+          <v-overlay value="true" absolute>
+            <v-col
+              class="text-center"
+              cols="12"
+            >
+              <h1 class="display-1 font-weight-thin mb-4">
+                danielgmateus
+              </h1>
+              <h4 class="subheading">
+                Analista de desenvolvimento | Python | PHP | NodeJS | VueJS
+              </h4>
+            </v-col>
+          </v-overlay>
         </v-row>
       </v-parallax>
     </v-container>

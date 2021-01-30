@@ -21,35 +21,52 @@
         </v-chip>
       </h1>
     </v-col>
+
     <v-col cols="12" md="4" v-for="(post, index) in posts" :key="index">
+
       <v-card
         class="mx-auto"
+        max-width="400"
       >
         <v-img
+          class="white--text align-end"
+          height="200px"
           :src="post.cover_image"
-        ></v-img>
-    
-        <v-card-title>
-          <p>
-            {{ post.name }}
-          </p>
+        >
+        </v-img>
+
+        <v-card-title class="content-title font-weight-bold">
+          {{ post.name }}
         </v-card-title>
     
-        <v-card-subtitle>
-          <p class="subtitle-2">
-            {{ post.description_short }}
-          </p>
-          <p class="subtitle-2 font-weight-bold">
-            Última atualização: {{ post.updated_at | getFormattedDateTime('DD/MM/YYYY HH:mm:ss') }}
-          </p>
+        <v-card-subtitle class="pb-2">
+          <v-chip
+            color="primary"
+            label
+            small
+            text-color="white"
+          >
+            {{ post.category.name }}
+          </v-chip>
         </v-card-subtitle>
     
+        <v-card-text class="text--primary">
+          {{ post.description_short }}
+        </v-card-text>
+
+        <v-divider class="mx-4"></v-divider>
+    
         <v-card-actions>
-          <v-btn small color="info" dark @click="$router.push({ path: `/postagem/${ post.slug }` }).catch(err => {})">
-            <v-icon>mdi-magnify</v-icon>  <span class="font-weight-bold">Visualizar</span>
+          <v-spacer></v-spacer>
+          <v-btn
+            small 
+            color="success" 
+            dark 
+            @click="$router.push({ path: `/postagem/${ post.slug }` }).catch(err => {})"
+          >
+            Visualizar
           </v-btn>
         </v-card-actions>
-    
       </v-card>
     </v-col>
   </v-row>
@@ -75,3 +92,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .v-card__subtitle, .v-card__text, .v-card__title {
+    padding: 10px;
+  }
+</style>
