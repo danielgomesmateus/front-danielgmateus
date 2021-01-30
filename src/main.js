@@ -5,6 +5,7 @@ import vuetify from './plugins/vuetify'
 import VueTheMask from 'vue-the-mask' 
 
 import AddThis from 'vue-simple-addthis-share'
+import VueFacebook from 'vue-facebook';
 
 import filters from './filters/filter'
 
@@ -44,6 +45,7 @@ Vue.use(VueTheMask)
 Vue.use(filters)
 
 Vue.component('add-this', AddThis)
+Vue.use(VueFacebook)
 
 new Vue({
   vuetify,

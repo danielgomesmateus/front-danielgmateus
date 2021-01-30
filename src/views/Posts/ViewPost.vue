@@ -47,6 +47,12 @@
           <div class="text-left text-content" v-html="post.content">
           </div>
         </v-col>
+        <v-col cols="12">
+          <fb-comment
+           :url="$router.path"
+           width="100%" 
+          />
+        </v-col>
       </v-row>
     </v-container>
   </v-app>
