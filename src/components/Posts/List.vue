@@ -97,4 +97,7 @@
   .v-card__subtitle, .v-card__text, .v-card__title {
     padding: 10px;
   }
+  .v-card__title {
+    word-break: normal !important;
+  }
 </style>
